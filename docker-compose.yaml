@@ -1,0 +1,15 @@
+services:
+  express:
+    build:
+      context: ./apps/express
+      dockerfile: Dockerfile
+    container_name: express-app
+    ports:
+      - '3001:3001'
+  hapi:
+    build:
+      context: ./apps/hapi
+      dockerfile: Dockerfile
+    container_name: hapi-app
+    ports:
+      - '3002:3002'
